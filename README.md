@@ -1,8 +1,10 @@
 Laravel-GAMP Package
 =========================
-[![Latest Stable Version](https://poser.pugx.org/irazasyed/laravel-gamp/v/stable.svg)](https://packagist.org/packages/irazasyed/laravel-gamp) 
-[![Total Downloads](https://poser.pugx.org/irazasyed/laravel-gamp/downloads.svg)](https://packagist.org/packages/irazasyed/laravel-gamp) 
-[![License](https://poser.pugx.org/irazasyed/laravel-gamp/license.svg)](https://packagist.org/packages/irazasyed/laravel-gamp)
+[![Latest Version](https://img.shields.io/github/release/irazasyed/laravel-gamp.svg?style=flat-square)](https://github.com/irazasyed/laravel-gamp/releases)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
+[![SensioLabsInsight](https://img.shields.io/sensiolabs/i/880d79a9-7bab-4872-ab98-76b2e53429e9.svg)](https://insight.sensiolabs.com/projects/880d79a9-7bab-4872-ab98-76b2e53429e9)
+[![Total Downloads](https://img.shields.io/packagist/dt/irazasyed/laravel-gamp.svg?style=flat-square)](https://packagist.org/packages/irazasyed/laravel-gamp)
+
 
 > Laravel GAMP: Google Analytics Measurement Protocol Package.
 > A wrapper around [THE ICONIC - GA Measurement Protocol][1] PHP Library. 
