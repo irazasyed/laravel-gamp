@@ -74,7 +74,7 @@ class LaravelGAMPServiceProvider extends ServiceProvider {
         }
 
         if (config('gamp.async_requests')) {
-            $analytics->makeNonBlocking();
+            $analytics->setAsyncRequest(true);
         }
 
         return $analytics;
