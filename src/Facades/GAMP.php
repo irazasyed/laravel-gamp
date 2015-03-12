@@ -20,7 +20,8 @@
 
 use Illuminate\Support\Facades\Facade;
 
-class GAMP extends Facade {
+class GAMP extends Facade
+{
 
     /**
      * Get the registered name of the component.
