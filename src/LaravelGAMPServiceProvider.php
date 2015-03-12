@@ -24,6 +24,13 @@ use TheIconic\Tracking\GoogleAnalytics\Analytics;
 class LaravelGAMPServiceProvider extends ServiceProvider {
 
     /**
+     * Holds path to Config File.
+     *
+     * @var string
+     */
+    protected $config_filepath;
+
+    /**
      * Bootstrap the application events.
      *
      * @return void
@@ -31,7 +38,7 @@ class LaravelGAMPServiceProvider extends ServiceProvider {
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/config/gamp.php' => config_path('gamp.php'),
+            $this->config_filepath => config_path('gamp.php'),
         ]);
     }
 
@@ -42,6 +49,10 @@ class LaravelGAMPServiceProvider extends ServiceProvider {
      */
     public function register()
     {
+        $this->config_filepath = __DIR__ . '/config/gamp.php';
+
+        $this->mergeConfigFrom($this->config_filepath, 'gamp');
+
         $this->app['gamp'] = $this->app->share(function ($app) {
             return $this->registerAnalytics();
         });
