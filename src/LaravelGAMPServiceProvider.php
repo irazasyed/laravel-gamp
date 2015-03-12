@@ -21,7 +21,8 @@
 use Illuminate\Support\ServiceProvider;
 use TheIconic\Tracking\GoogleAnalytics\Analytics;
 
-class LaravelGAMPServiceProvider extends ServiceProvider {
+class LaravelGAMPServiceProvider extends ServiceProvider
+{
 
     /**
      * Holds path to Config File.
@@ -65,7 +66,7 @@ class LaravelGAMPServiceProvider extends ServiceProvider {
      */
     public function provides()
     {
-        return [ 'gamp' ];
+        return ['gamp'];
     }
 
     /**
