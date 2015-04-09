@@ -24,11 +24,11 @@ use TheIconic\Tracking\GoogleAnalytics\Analytics;
 class LaravelGAMPServiceProvider extends ServiceProvider
 {
     /**
-	 * Indicates if loading of the provider is deferred.
-	 *
-	 * @var bool
-	 */
-	protected $defer = true;
+     * Indicates if loading of the provider is deferred.
+     * 
+     * @var bool
+     */
+     protected $defer = true;
 	
     /**
      * Holds path to Config File.
