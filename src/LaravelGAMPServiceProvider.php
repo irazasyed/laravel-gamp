@@ -25,29 +25,17 @@ class LaravelGAMPServiceProvider extends ServiceProvider
 {
     /**
      * Indicates if loading of the provider is deferred.
-     * 
+     *
      * @var bool
      */
-     protected $defer = true;
-	
+    protected $defer = true;
+
     /**
      * Holds path to Config File.
      *
      * @var string
      */
     protected $config_filepath;
-
-    /**
-     * Bootstrap the application events.
-     *
-     * @return void
-     */
-    public function boot()
-    {
-        $this->publishes([
-            $this->config_filepath => config_path('gamp.php'),
-        ]);
-    }
 
     /**
      * Register the service provider.
@@ -63,6 +51,18 @@ class LaravelGAMPServiceProvider extends ServiceProvider
         $this->app['gamp'] = $this->app->share(function ($app) {
             return $this->registerAnalytics();
         });
+    }
+
+    /**
+     * Bootstrap the application events.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        $this->publishes([
+            $this->config_filepath => config_path('gamp.php'),
+        ]);
     }
 
     /**
