@@ -23,13 +23,13 @@ Laravel-GAMP Package
 You can either add the package directly by firing this command
 
 ```
-$ composer require irazasyed/laravel-gamp:~0.1
+$ composer require irazasyed/laravel-gamp:0.*
 ```
 	
 Or add in the `require` key of `composer.json` file manually
 
 ```
-"irazasyed/laravel-gamp": "~0.1"
+"irazasyed/laravel-gamp": "0.*"
 ```
 
 And Run the Composer update command
