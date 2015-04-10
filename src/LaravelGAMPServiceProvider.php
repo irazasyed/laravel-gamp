@@ -38,22 +38,6 @@ class LaravelGAMPServiceProvider extends ServiceProvider
     protected $config_filepath;
 
     /**
-     * Register the service provider.
-     *
-     * @return void
-     */
-    public function register()
-    {
-        $this->config_filepath = __DIR__ . '/config/gamp.php';
-
-        $this->mergeConfigFrom($this->config_filepath, 'gamp');
-
-        $this->app['gamp'] = $this->app->share(function ($app) {
-            return $this->registerAnalytics();
-        });
-    }
-
-    /**
      * Bootstrap the application events.
      *
      * @return void
@@ -66,6 +50,45 @@ class LaravelGAMPServiceProvider extends ServiceProvider
     }
 
     /**
+     * Register the service provider.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        $this->config_filepath = __DIR__ . '/config/gamp.php';
+
+        $this->mergeConfigFrom($this->config_filepath, 'gamp');
+
+        $this->registerAnalytics();
+    }
+
+    /**
+     * Initialize Analytics Library with Default Config
+     *
+     * @return void
+     */
+    public function registerAnalytics()
+    {
+        $this->app->singleton('gamp', function ($app) {
+            $analytics = new Analytics($app['config']['gamp.is_ssl']);
+
+            $analytics->setProtocolVersion($app['config']['gamp.protocol_version'])
+                ->setTrackingId($app['config']['gamp.tracking_id']);
+
+            if ($app['config']['gamp.anonymize_ip']) {
+                $analytics->setAnonymizeIp('1');
+            }
+
+            if ($app['config']['gamp.async_requests']) {
+                $analytics->setAsyncRequest(true);
+            }
+
+            return $analytics;
+        });
+    }
+
+    /**
      * Get the services provided by the provider.
      *
      * @return array
@@ -73,28 +96,5 @@ class LaravelGAMPServiceProvider extends ServiceProvider
     public function provides()
     {
         return ['gamp'];
-    }
-
-    /**
-     * Initialize Analytics Library with Default Config
-     *
-     * @return \TheIconic\Tracking\GoogleAnalytics\Analytics
-     */
-    public function registerAnalytics()
-    {
-        $analytics = new Analytics(config('gamp.is_ssl'));
-
-        $analytics->setProtocolVersion(config('gamp.protocol_version'))
-            ->setTrackingId(config('gamp.tracking_id'));
-
-        if (config('gamp.anonymize_ip')) {
-            $analytics->setAnonymizeIp('1');
-        }
-
-        if (config('gamp.async_requests')) {
-            $analytics->setAsyncRequest(true);
-        }
-
-        return $analytics;
     }
 }
