@@ -81,7 +81,7 @@ The former command publishes config file for just this package and the latter pu
 
 ## Usage
 
-Open `gamp.php` in `app/config/packages/irazasyed/laravel-gamp` (**Laravel 4**) / `config` (**Laravel 5**) file and set the `tracking_id` with your Google Analytics tracking / web property ID.
+Open `gamp.php` file in `app/config/packages/irazasyed/laravel-gamp` (**Laravel 4**) / `./config` (**Laravel 5**) and set the `tracking_id` with your Google Analytics tracking / web property ID.
 Refer the config file for other default configuration settings.
 
 This Package adds Laravel Support to [GA Measurement Protocol][1] PHP Library by [THE ICONIC](https://github.com/theiconic). 
