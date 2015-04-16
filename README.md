@@ -1,7 +1,7 @@
 Laravel-GAMP Package
 =========================
 
-[![Package for Laravel](https://img.shields.io/badge/Package%20for%20Laravel-5-blue.svg?style=flat-square)](https://github.com/irazasyed/laravel-gamp)
+[![Package for Laravel](https://img.shields.io/badge/Package%20for%20Laravel-4/5-blue.svg?style=flat-square)](https://github.com/irazasyed/laravel-gamp)
 [![Latest Version](https://img.shields.io/github/release/irazasyed/laravel-gamp.svg?style=flat-square)](https://github.com/irazasyed/laravel-gamp/releases)
 [![Latest Tag](https://img.shields.io/github/tag/irazasyed/laravel-gamp.svg?style=flat-square)](https://github.com/irazasyed/laravel-gamp/releases)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
@@ -9,9 +9,8 @@ Laravel-GAMP Package
 [![Total Downloads](https://img.shields.io/packagist/dt/irazasyed/laravel-gamp.svg?style=flat-square)](https://packagist.org/packages/irazasyed/laravel-gamp)
 
 
-> Laravel GAMP: Google Analytics Measurement Protocol Package.
-> A wrapper around [THE ICONIC - GA Measurement Protocol][1] PHP Library. 
-> Adds Support for Seamless Usage with Laravel 5.
+> Laravel GAMP: Google Analytics Measurement Protocol Package for Laravel 4 & 5.
+> Send data to Google Analytics from Laravel. Supports all GA Measurement Protocol API methods.
 
 ## Quick start
 
@@ -58,14 +57,23 @@ Optionally add an alias to make it easier to use the library. Open `config/app.p
 
 Open your terminal window and fire the following command to publish config file to your config directory:
 
+#### Laravel 4:
+---------------
 ```
-php artisan vendor:publish --provider="Irazasyed\LaravelGAMP\LaravelGAMPServiceProvider"
+$ php artisan config:publish irazasyed/laravel-gamp
+```
+
+#### Laravel 5:
+---------------
+
+```
+$ php artisan vendor:publish --provider="Irazasyed\LaravelGAMP\LaravelGAMPServiceProvider"
 ```
 
 OR
 
 ```
-php artisan vendor:publish
+$ php artisan vendor:publish
 ```
 
 The former command publishes config file for just this package and the latter publishes vendor files for other packages too. Depending on what you want to do, you can use any (Doesn't really matter).
@@ -73,10 +81,10 @@ The former command publishes config file for just this package and the latter pu
 
 ## Usage
 
-Open `config/gamp.php` file and set the `tracking_id` with your Google Analytics tracking / web property ID.
+Open `gamp.php` in `app/config/packages/irazasyed/laravel-gamp` (**Laravel 4**) / `config` (**Laravel 5**) file and set the `tracking_id` with your Google Analytics tracking / web property ID.
 Refer the config file for other default configuration settings.
 
-This Package adds Laravel Support to [THE ICONIC - GA Measurement Protocol][1] PHP Library. 
+This Package adds Laravel Support to [GA Measurement Protocol][1] PHP Library by [THE ICONIC](https://github.com/theiconic). 
 It's simply a wrapper around the library with default config for easier usage with Laravel. 
 So all the methods listed [here][2] are available and will work seamlessly.
 
@@ -92,11 +100,11 @@ $gamp->sendPageview();
 
 ### Config Overview
 
-Open `config/gamp.php` for detailed comments for each config.
+Open the config file for detailed comments for each option.
 
 Set your Google Analytics Tracking / Web Property ID in `tracking_id` key **[REQUIRED]**
 
-```
+```php
 'tracking_id'      => 'UA-XXXX-Y',
 ```
 
@@ -104,19 +112,19 @@ All other configs are optional, use as per your requirements.
 
 To send data over SSL, set `is_ssl` to true.
 
-```
+```php
 'is_ssl' => true,
 ```
 
 To Anonymize IP, set `anonymize_ip` to true.
 
-```
+```php
 'anonymize_ip' => true,
 ```
 
 To Make Async Requests, set `async_requests` to true.
 
-```
+```php
 'async_requests'  => true,
 ```
 
@@ -128,7 +136,7 @@ Refer the library's [documentation][2] for other remaining methods and examples,
 
 ## License
 
-MIT © [Syed I.R](http://lk.gd/irazasyed)
+[MIT](LICENSE) © [Syed I.R](http://lk.gd/irazasyed)
 
 
 ## Additional information
