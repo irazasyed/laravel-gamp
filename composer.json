@@ -18,13 +18,13 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "illuminate/support": "~5.0",
+        "illuminate/support": "~4.0|~5.0",
         "theiconic/php-ga-measurement-protocol": "~1.1"
     },
     "autoload": {
-        "psr-4": {
+        "psr-0": {
             "Irazasyed\\LaravelGAMP\\": "src/"
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "stable"
 }
