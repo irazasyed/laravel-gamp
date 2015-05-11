@@ -1,6 +1,8 @@
-<?php namespace Irazasyed\LaravelGAMP\Facades;
+<?php
 
-/**
+namespace Irazasyed\LaravelGAMP\Facades;
+
+/*
  * Laravel GAMP: Google Analytics - Measurement Protocol
  *
  * NOTICE OF LICENSE
@@ -22,7 +24,6 @@ use Illuminate\Support\Facades\Facade;
 
 class GAMP extends Facade
 {
-
     /**
      * Get the registered name of the component.
      *

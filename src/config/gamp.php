@@ -1,6 +1,7 @@
 <?php
+
 /**
- * Laravel GAMP: Google Analytics - Measurement Protocol
+ * Laravel GAMP: Google Analytics - Measurement Protocol.
  *
  * NOTICE OF LICENSE
  *
@@ -10,10 +11,10 @@
  * bundled with this package in the LICENSE file.  It is also available at
  * the following URL: http://opensource.org/licenses/MIT
  *
- * @package       LaravelGAMP
  * @author        Lukonet
  * @license       MIT
  * @copyright (c) 2015 Lukonet Pvt. Ltd.
+ *
  * @link          https://lukonet.com
  */
 
@@ -30,7 +31,7 @@ return [
     | https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#tid
     |
     */
-    'tracking_id'      => 'UA-XXXX-Y',
+    'tracking_id' => 'UA-XXXX-Y',
 
     /*
     |--------------------------------------------------------------------------
@@ -63,7 +64,7 @@ return [
     | Valid Values: (Boolean) "true" OR "false"
     |
     */
-    'is_ssl'           => false,
+    'is_ssl' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -79,7 +80,7 @@ return [
     | Valid Values: (Boolean) "true" OR "false"
     |
     */
-    'anonymize_ip'     => false,
+    'anonymize_ip' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -92,5 +93,5 @@ return [
     | Valid Values: (Boolean) "true" OR "false"
     |
     */
-    'async_requests'   => false,
+    'async_requests' => false,
 ];

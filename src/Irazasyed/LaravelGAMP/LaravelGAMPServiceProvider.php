@@ -1,6 +1,8 @@
-<?php namespace Irazasyed\LaravelGAMP;
+<?php
 
-/**
+namespace Irazasyed\LaravelGAMP;
+
+/*
  * Laravel GAMP: Google Analytics - Measurement Protocol
  *
  * NOTICE OF LICENSE
@@ -38,7 +40,7 @@ class LaravelGAMPServiceProvider extends ServiceProvider
     protected $config_filepath;
 
     /**
-     * Indicates if the package is loaded in Laravel 4
+     * Indicates if the package is loaded in Laravel 4.
      *
      * @var bool
      */
@@ -46,13 +48,12 @@ class LaravelGAMPServiceProvider extends ServiceProvider
 
     /**
      * Bootstrap the application events.
-     *
-     * @return void
      */
     public function boot()
     {
-        if($this->isLaravel4) {
+        if ($this->isLaravel4) {
             $this->package('irazasyed/laravel-gamp', 'gamp');
+
             return;
         }
 
@@ -63,45 +64,41 @@ class LaravelGAMPServiceProvider extends ServiceProvider
 
     /**
      * Register the service provider.
-     *
-     * @return void
      */
     public function register()
     {
-
         $this->registerAnalytics();
 
-        if(method_exists($this, 'package')) {
+        if (method_exists($this, 'package')) {
             $this->isLaravel4 = true;
+
             return;
         }
 
-        $this->config_filepath = realpath(__DIR__ . '/../../config/gamp.php');
+        $this->config_filepath = realpath(__DIR__.'/../../config/gamp.php');
 
         $this->mergeConfigFrom($this->config_filepath, 'gamp');
     }
 
     /**
-     * Initialize Analytics Library with Default Config
-     *
-     * @return void
+     * Initialize Analytics Library with Default Config.
      */
     public function registerAnalytics()
     {
         $this->app->singleton('gamp', function ($app) {
-            $packageNamespace = ($this->isLaravel4) ? 'gamp::gamp.':'gamp.';
+            $packageNamespace = ($this->isLaravel4) ? 'gamp::gamp.' : 'gamp.';
             $config = $app['config'];
 
-            $analytics = new Analytics($config->get($packageNamespace . 'is_ssl', false));
+            $analytics = new Analytics($config->get($packageNamespace.'is_ssl', false));
 
-            $analytics->setProtocolVersion($config->get($packageNamespace . 'protocol_version', 1))
-                ->setTrackingId($config->get($packageNamespace . 'tracking_id'));
+            $analytics->setProtocolVersion($config->get($packageNamespace.'protocol_version', 1))
+                ->setTrackingId($config->get($packageNamespace.'tracking_id'));
 
-            if ($config->get($packageNamespace . 'anonymize_ip', false)) {
+            if ($config->get($packageNamespace.'anonymize_ip', false)) {
                 $analytics->setAnonymizeIp('1');
             }
 
-            if ($config->get($packageNamespace . 'async_requests', false)) {
+            if ($config->get($packageNamespace.'async_requests', false)) {
                 $analytics->setAsyncRequest(true);
             }
 
