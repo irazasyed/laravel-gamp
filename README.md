@@ -11,6 +11,9 @@ Laravel-GAMP Package
 > Laravel GAMP: Google Analytics Measurement Protocol Package for Laravel 4 & 5.
 > Send data to Google Analytics from Laravel. Supports all GA Measurement Protocol API methods.
 
+[![Laravel GAMP](https://cloud.githubusercontent.com/assets/1915268/8476296/b49f74ac-20dd-11e5-8698-aa23b2f7e6fd.png)](http://lk.gd/irazasyed)
+
+
 ## Quick start
 
 
