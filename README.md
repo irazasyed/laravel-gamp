@@ -60,13 +60,13 @@ Optionally add an alias to make it easier to use the library. Open `config/app.p
 
 Open your terminal window and fire the following command to publish config file to your config directory:
 
-```
+```cli
 $ php artisan vendor:publish --provider="Irazasyed\LaravelGAMP\LaravelGAMPServiceProvider"
 ```
 
 OR
 
-```
+```cli
 $ php artisan vendor:publish
 ```
 
