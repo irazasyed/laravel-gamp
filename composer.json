@@ -19,7 +19,7 @@
     ],
     "require": {
         "php": ">=5.5.0",
-        "illuminate/support": "5.1.*",
+        "illuminate/support": "5.0.*|5.1.*",
         "theiconic/php-ga-measurement-protocol": "^2.0"
     },
     "autoload": {

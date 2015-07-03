@@ -16,7 +16,7 @@ Laravel-GAMP Package
 
 ## Quick start
 
-> If you're on Laravel `4.2` or `5.0`, Please check `0.5` branch for installation instructions.
+> If you're on Laravel `4.2` or on `5.0` with PHP `5.4` & above, Please use `0.5` branch.
 
 ### Installation
 
