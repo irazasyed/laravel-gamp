@@ -27,7 +27,6 @@
         }
     },
     "suggest": {
-        "irazasyed/larasupport": "Allows you to use any Laravel Package in Lumen by adding support!"
-    },
-    "minimum-stability": "stable"
+        "irazasyed/larasupport": "Adds Package Support in Lumen, Lets you install any Laravel Package."
+    }
 }
