@@ -40,23 +40,10 @@ class LaravelGAMPServiceProvider extends ServiceProvider
     protected $config_filepath;
 
     /**
-     * Indicates if the package is loaded in Laravel 4.
-     *
-     * @var bool
-     */
-    protected $isLaravel4 = false;
-
-    /**
      * Bootstrap the application events.
      */
     public function boot()
     {
-        if ($this->isLaravel4) {
-            $this->package('irazasyed/laravel-gamp', 'gamp');
-
-            return;
-        }
-
         $this->publishes([
             $this->config_filepath => config_path('gamp.php'),
         ]);
@@ -69,13 +56,7 @@ class LaravelGAMPServiceProvider extends ServiceProvider
     {
         $this->registerAnalytics();
 
-        if (method_exists($this, 'package')) {
-            $this->isLaravel4 = true;
-
-            return;
-        }
-
-        $this->config_filepath = realpath(__DIR__.'/../../config/gamp.php');
+        $this->config_filepath = __DIR__.'/config/gamp.php';
 
         $this->mergeConfigFrom($this->config_filepath, 'gamp');
     }
@@ -86,19 +67,18 @@ class LaravelGAMPServiceProvider extends ServiceProvider
     public function registerAnalytics()
     {
         $this->app->singleton('gamp', function ($app) {
-            $packageNamespace = ($this->isLaravel4) ? 'gamp::gamp.' : 'gamp.';
             $config = $app['config'];
 
-            $analytics = new Analytics($config->get($packageNamespace.'is_ssl', false));
+            $analytics = new Analytics($config->get('gamp.is_ssl', false));
 
-            $analytics->setProtocolVersion($config->get($packageNamespace.'protocol_version', 1))
-                ->setTrackingId($config->get($packageNamespace.'tracking_id'));
+            $analytics->setProtocolVersion($config->get('gamp.protocol_version', 1))
+                ->setTrackingId($config->get('gamp.tracking_id'));
 
-            if ($config->get($packageNamespace.'anonymize_ip', false)) {
+            if ($config->get('gamp.anonymize_ip', false)) {
                 $analytics->setAnonymizeIp('1');
             }
 
-            if ($config->get($packageNamespace.'async_requests', false)) {
+            if ($config->get('gamp.async_requests', false)) {
                 $analytics->setAsyncRequest(true);
             }
 
