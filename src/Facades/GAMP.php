@@ -31,6 +31,6 @@ class GAMP extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'gamp';
+        return 'TheIconic\Tracking\GoogleAnalytics\Analytics';
     }
 }
