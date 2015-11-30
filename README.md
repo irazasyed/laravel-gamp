@@ -92,6 +92,16 @@ $gamp->setDocumentPath( '/page' );
 $gamp->sendPageview();
 ```
 
+Send an Event:
+
+```php
+$gamp = GAMP::setClientId( '123456' );
+$gamp->setEventCategory('Blog Post')
+->setEventAction('Create')
+->setEventLabel('Using GAMP In Laravel')
+->sendEvent();
+```
+
 ### Config Overview
 
 Open the config file for detailed comments for each option.
