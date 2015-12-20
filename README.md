@@ -1,7 +1,7 @@
 Laravel-GAMP Package
 =========================
 
-[![Package for Laravel](https://img.shields.io/badge/Package%20for%20Laravel-5/5.1-blue.svg?style=flat-square)](https://github.com/irazasyed/laravel-gamp)
+[![Package for Laravel](https://img.shields.io/badge/Package%20for%20Laravel-5-blue.svg?style=flat-square)](https://github.com/irazasyed/laravel-gamp)
 [![Latest Version](https://img.shields.io/github/release/irazasyed/laravel-gamp.svg?style=flat-square)](https://github.com/irazasyed/laravel-gamp/releases)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/880d79a9-7bab-4872-ab98-76b2e53429e9/mini.png)](https://insight.sensiolabs.com/projects/880d79a9-7bab-4872-ab98-76b2e53429e9)
@@ -16,7 +16,9 @@ Laravel-GAMP Package
 
 ## Quick start
 
-> If you're on Laravel `4.2` or on `5.0` with PHP `5.4` & above, Please use `0.5` branch.
+> If you're on Laravel `4.2` or on `5.0` with PHP `5.4` & above, Please use `0.5` branch. Otherwise, Just follow the below instructions.
+>
+> Supported Laravel Versions: `5.1` & `5.2`
 
 ### Installation
 
