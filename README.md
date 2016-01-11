@@ -8,8 +8,8 @@ Laravel-GAMP Package
 [![Total Downloads](https://img.shields.io/packagist/dt/irazasyed/laravel-gamp.svg?style=flat-square)](https://packagist.org/packages/irazasyed/laravel-gamp)
 
 
-> Laravel GAMP: Google Analytics Measurement Protocol Package for Laravel 5.
-> Send data to Google Analytics from Laravel. Supports all GA Measurement Protocol API methods.
+> Laravel GAMP: Google Analytics Measurement Protocol Package for Laravel 5 & Lumen 5.
+> Send data to Google Analytics from Laravel/Lumen. Supports all GA Measurement Protocol API methods.
 
 [![Laravel GAMP](https://cloud.githubusercontent.com/assets/1915268/8476296/b49f74ac-20dd-11e5-8698-aa23b2f7e6fd.png)](https://github.com/irazasyed)
 
@@ -18,7 +18,7 @@ Laravel-GAMP Package
 
 > If you're on Laravel `4.2` or on `5.0` with PHP `5.4` & above, Please use `0.5` branch. Otherwise, Just follow the below instructions.
 >
-> Supported Laravel Versions: `5.1` & `5.2`
+> Supported Laravel/Lumen Versions: `5.1` & `5.2`
 
 ### Installation
 
@@ -44,13 +44,23 @@ $ composer update
 
 #### Step 2: Add the Service Provider
 
+##### Laravel
+
 Open `config/app.php` and, to your "providers" array at the bottom, add:
 
 ```php
 Irazasyed\LaravelGAMP\LaravelGAMPServiceProvider::class
 ```
 
-#### Step 3: Add Facade (Optional)
+##### Lumen
+
+Open `bootstrap/app.php` and add register the service provider by adding:
+
+``` php
+$app->register(Irazasyed\LaravelGAMP\LaravelGAMPServiceProvider::class);
+```
+
+#### Step 3: Add Facade (Optional) (Laravel Only)
 
 Optionally add an alias to make it easier to use the library. Open `config/app.php` and, to your "aliases" array at the bottom, add:
 
@@ -58,17 +68,17 @@ Optionally add an alias to make it easier to use the library. Open `config/app.p
 'GAMP'  => Irazasyed\LaravelGAMP\Facades\GAMP::class
 ```
 
-#### Step 4: Publish Config
+#### Step 4: Publish Config (Laravel Only)
 
 Open your terminal window and fire the following command to publish config file to your config directory:
 
-```cli
+```bash
 $ php artisan vendor:publish --provider="Irazasyed\LaravelGAMP\LaravelGAMPServiceProvider"
 ```
 
 OR
 
-```cli
+```bash
 $ php artisan vendor:publish
 ```
 
