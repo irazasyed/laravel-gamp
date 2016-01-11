@@ -1,17 +1,15 @@
 Laravel-GAMP Package
 =========================
-
-[![Package for Laravel](https://img.shields.io/badge/Package%20for%20Laravel-5-blue.svg?style=flat-square)](https://github.com/irazasyed/laravel-gamp)
-[![Latest Version](https://img.shields.io/github/release/irazasyed/laravel-gamp.svg?style=flat-square)](https://github.com/irazasyed/laravel-gamp/releases)
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/880d79a9-7bab-4872-ab98-76b2e53429e9/mini.png)](https://insight.sensiolabs.com/projects/880d79a9-7bab-4872-ab98-76b2e53429e9)
-[![Total Downloads](https://img.shields.io/packagist/dt/irazasyed/laravel-gamp.svg?style=flat-square)](https://packagist.org/packages/irazasyed/laravel-gamp)
-
+[![Laravel & Lumen Package][ico-package]][link-repo]
+[![Latest Version on Packagist][ico-version]][link-packagist]
+[![Software License][ico-license]](LICENSE)
+[![SensioLabsInsight][ico-sensiolabs]][link-sensiolabs]
+[![Total Downloads][ico-downloads]][link-downloads]
 
 > Laravel GAMP: Google Analytics Measurement Protocol Package for Laravel 5 & Lumen 5.
 > Send data to Google Analytics from Laravel/Lumen. Supports all GA Measurement Protocol API methods.
 
-[![Laravel GAMP](https://cloud.githubusercontent.com/assets/1915268/8476296/b49f74ac-20dd-11e5-8698-aa23b2f7e6fd.png)](https://github.com/irazasyed)
+[![Laravel GAMP][cover-img]][link-owner]
 
 
 ## Quick start
@@ -90,9 +88,9 @@ The former command publishes config file for just this package and the latter pu
 Open config file `config/gamp.php` and set the `tracking_id` with your Google Analytics tracking / web property ID.
 Refer the config file for other default configuration settings.
 
-This Package adds Laravel Support to [GA Measurement Protocol][1] PHP Library by [THE ICONIC](https://github.com/theiconic).
+This Package adds Laravel Support to [GA Measurement Protocol][link-lib] PHP Library by THE ICONIC.
 It's simply a wrapper around the library with default config for easier usage with Laravel.
-So all the methods listed [here][2] are available and will work seamlessly.
+So all the methods listed [here][link-docs] are available and will work seamlessly.
 
 ### Example Usage
 
@@ -150,22 +148,35 @@ To Make Async Requests, set `async_requests` to true.
 
 ...
 
-Refer the library's [documentation][2] for other remaining methods and examples, they all work.
+Refer the library's [documentation][link-docs] for other remaining methods and examples, they all work.
 
 > **Note:** You don't have to use the protocol version, tracking id, anonymize ip and async request (non-blocking) methods from the original library as they're automatically set in Service Provider when the package is initialized based on the config file. As long as you update the config file with correct settings, it should work just fine.
 
 ## Additional information
 
-Any issues, please [report here](https://github.com/irazasyed/laravel-gamp/issues)
+Any issues, please [report here][link-issues]
 
 ## Credits
 
-This package is a wrapper around the GA Measurement Protocol PHP Library. Thanks to the guys @ [THE ICONIC][1] who developed the library!
-
-[1]: https://github.com/theiconic/php-ga-measurement-protocol
-[2]: https://github.com/theiconic/php-ga-measurement-protocol#usage
+This package is a wrapper around the GA Measurement Protocol PHP Library. Thanks to the guys @ [THE ICONIC][link-lib] who developed the library!
 
 ## License
 
-[MIT](LICENSE) © [Syed Irfaq R.](https://github.com/irazasyed)
+[MIT](LICENSE) © [Syed Irfaq R.][link-owner]
+
+[cover-img]: https://cloud.githubusercontent.com/assets/1915268/8476296/b49f74ac-20dd-11e5-8698-aa23b2f7e6fd.png
+[ico-version]: https://img.shields.io/packagist/v/irazasyed/laravel-gamp.svg?style=flat-square
+[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/irazasyed/laravel-gamp.svg?style=flat-square
+[ico-sensiolabs]: https://insight.sensiolabs.com/projects/880d79a9-7bab-4872-ab98-76b2e53429e9/mini.png
+[ico-package]: https://img.shields.io/badge/Laravel%20%26%20Lumen-5-blue.svg?style=flat-square
+
+[link-issues]: https://github.com/irazasyed/laravel-gamp/issues
+[link-lib]: https://github.com/theiconic/php-ga-measurement-protocol
+[link-docs]: https://github.com/theiconic/php-ga-measurement-protocol#usage
+[link-owner]: https://github.com/irazasyed
+[link-repo]: https://github.com/irazasyed/laravel-gamp
+[link-packagist]: https://packagist.org/packages/irazasyed/laravel-gamp
+[link-downloads]: https://packagist.org/packages/irazasyed/laravel-gamp/stats
+[link-sensiolabs]: https://insight.sensiolabs.com/projects/880d79a9-7bab-4872-ab98-76b2e53429e9
 
