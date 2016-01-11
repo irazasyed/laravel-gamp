@@ -9,7 +9,7 @@ Laravel-GAMP Package
 > Laravel GAMP: Google Analytics Measurement Protocol Package for Laravel 5 & Lumen 5.
 > Send data to Google Analytics from Laravel/Lumen. Supports all GA Measurement Protocol API methods.
 
-[![Laravel GAMP][cover-img]][link-owner]
+[![Laravel GAMP][cover-img]][link-author]
 
 
 ## Quick start
@@ -158,11 +158,13 @@ Any issues, please [report here][link-issues]
 
 ## Credits
 
-This package is a wrapper around the GA Measurement Protocol PHP Library. Thanks to the guys @ [THE ICONIC][link-lib] who developed the library!
+- [Syed Irfaq R.][link-author] - For Laravel and Lumen Bridge.
+- [THE ICONIC][link-lib] - For GA Measurement Protocol PHP Library.
+- [All Contributors][link-contributors]
 
 ## License
 
-[MIT](LICENSE) © [Syed Irfaq R.][link-owner]
+[MIT](LICENSE) © [Syed Irfaq R.][link-author]
 
 [cover-img]: https://cloud.githubusercontent.com/assets/1915268/8476296/b49f74ac-20dd-11e5-8698-aa23b2f7e6fd.png
 [ico-version]: https://img.shields.io/packagist/v/irazasyed/laravel-gamp.svg?style=flat-square
@@ -171,11 +173,12 @@ This package is a wrapper around the GA Measurement Protocol PHP Library. Thanks
 [ico-sensiolabs]: https://insight.sensiolabs.com/projects/880d79a9-7bab-4872-ab98-76b2e53429e9/mini.png
 [ico-package]: https://img.shields.io/badge/Laravel%20%26%20Lumen-5-blue.svg?style=flat-square
 
+[link-author]: https://github.com/irazasyed
+[link-repo]: https://github.com/irazasyed/laravel-gamp
 [link-issues]: https://github.com/irazasyed/laravel-gamp/issues
+[link-contributors]: https://github.com/irazasyed/laravel-gamp/contributors
 [link-lib]: https://github.com/theiconic/php-ga-measurement-protocol
 [link-docs]: https://github.com/theiconic/php-ga-measurement-protocol#usage
-[link-owner]: https://github.com/irazasyed
-[link-repo]: https://github.com/irazasyed/laravel-gamp
 [link-packagist]: https://packagist.org/packages/irazasyed/laravel-gamp
 [link-downloads]: https://packagist.org/packages/irazasyed/laravel-gamp/stats
 [link-sensiolabs]: https://insight.sensiolabs.com/projects/880d79a9-7bab-4872-ab98-76b2e53429e9
