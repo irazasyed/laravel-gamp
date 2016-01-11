@@ -3,6 +3,7 @@
     "description": "Send analytics data to Google Analytics from Laravel. A package for GA Measurement Protocol API",
     "keywords": [
         "laravel google analytics",
+        "lumen google analytics",
         "google analytics",
         "analytics",
         "tracking",
