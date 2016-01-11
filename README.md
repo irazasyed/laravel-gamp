@@ -26,7 +26,7 @@ Laravel-GAMP Package
 
 You can either add the package directly by firing this command
 
-```cli
+``` bash
 $ composer require irazasyed/laravel-gamp
 ```
 
@@ -38,7 +38,7 @@ Or add in the `require` key of `composer.json` file manually
 
 And Run the Composer update command
 
-```cli
+``` bash
 $ composer update
 ```
 
@@ -48,7 +48,7 @@ $ composer update
 
 Open `config/app.php` and, to your "providers" array at the bottom, add:
 
-```php
+``` php
 Irazasyed\LaravelGAMP\LaravelGAMPServiceProvider::class
 ```
 
@@ -64,7 +64,7 @@ $app->register(Irazasyed\LaravelGAMP\LaravelGAMPServiceProvider::class);
 
 Optionally add an alias to make it easier to use the library. Open `config/app.php` and, to your "aliases" array at the bottom, add:
 
-```php
+``` php
 'GAMP'  => Irazasyed\LaravelGAMP\Facades\GAMP::class
 ```
 
@@ -72,13 +72,13 @@ Optionally add an alias to make it easier to use the library. Open `config/app.p
 
 Open your terminal window and fire the following command to publish config file to your config directory:
 
-```bash
+``` bash
 $ php artisan vendor:publish --provider="Irazasyed\LaravelGAMP\LaravelGAMPServiceProvider"
 ```
 
 OR
 
-```bash
+``` bash
 $ php artisan vendor:publish
 ```
 
@@ -98,7 +98,9 @@ So all the methods listed [here][2] are available and will work seamlessly.
 
 Send a Page view hit:
 
-```php
+``` php
+use Irazasyed\LaravelGAMP\Facades\GAMP;
+
 $gamp = GAMP::setClientId( '123456' );
 $gamp->setDocumentPath( '/page' );
 $gamp->sendPageview();
@@ -106,7 +108,9 @@ $gamp->sendPageview();
 
 Send an Event:
 
-```php
+``` php
+use Irazasyed\LaravelGAMP\Facades\GAMP;
+
 $gamp = GAMP::setClientId( '123456' );
 $gamp->setEventCategory('Blog Post')
 ->setEventAction('Create')
@@ -120,7 +124,7 @@ Open the config file for detailed comments for each option.
 
 Set your Google Analytics Tracking / Web Property ID in `tracking_id` key **[REQUIRED]**
 
-```php
+``` php
 'tracking_id' => 'UA-XXXX-Y',
 ```
 
@@ -128,19 +132,19 @@ All other configuration options are optional, use as per your requirements.
 
 To send data over SSL, set `is_ssl` to true.
 
-```php
+``` php
 'is_ssl' => true,
 ```
 
 To Anonymize IP, set `anonymize_ip` to true.
 
-```php
+``` php
 'anonymize_ip' => true,
 ```
 
 To Make Async Requests, set `async_requests` to true.
 
-```php
+``` php
 'async_requests'  => true,
 ```
 
