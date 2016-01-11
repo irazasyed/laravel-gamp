@@ -16,12 +16,15 @@ namespace Irazasyed\LaravelGAMP;
  * @package       LaravelGAMP
  * @author        Lukonet
  * @license       MIT
- * @copyright (c) 2015 Lukonet Pvt. Ltd.
+ * @copyright (c) 2015-16 Lukonet Technologies Pvt. Ltd.
  * @link          https://lukonet.com
  */
 
 use Illuminate\Support\ServiceProvider;
 use TheIconic\Tracking\GoogleAnalytics\Analytics;
+use Laravel\Lumen\Application as LumenApplication;
+use Illuminate\Foundation\Application as LaravelApplication;
+use Illuminate\Contracts\Container\Container as Application;
 
 class LaravelGAMPServiceProvider extends ServiceProvider
 {
@@ -33,20 +36,29 @@ class LaravelGAMPServiceProvider extends ServiceProvider
     protected $defer = true;
 
     /**
-     * Holds path to Config File.
-     *
-     * @var string
-     */
-    protected $config_filepath;
-
-    /**
      * Bootstrap the application events.
      */
     public function boot()
     {
-        $this->publishes([
-            $this->config_filepath => config_path('gamp.php'),
-        ]);
+        $this->setupConfig($this->app);
+    }
+
+    /**
+     * Setup the config.
+     *
+     * @param \Illuminate\Contracts\Container\Container $app
+     */
+    protected function setupConfig(Application $app)
+    {
+        $source = __DIR__.'/config/gamp.php';
+
+        if ($app instanceof LaravelApplication && $app->runningInConsole()) {
+            $this->publishes([$source => config_path('gamp.php')]);
+        } elseif ($app instanceof LumenApplication) {
+            $app->configure('gamp');
+        }
+
+        $this->mergeConfigFrom($source, 'gamp');
     }
 
     /**
@@ -54,19 +66,17 @@ class LaravelGAMPServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->registerAnalytics();
-
-        $this->config_filepath = __DIR__.'/config/gamp.php';
-
-        $this->mergeConfigFrom($this->config_filepath, 'gamp');
+        $this->registerAnalytics($this->app);
     }
 
     /**
      * Initialize Analytics Library with Default Config.
+     *
+     * @param \Illuminate\Contracts\Container\Container $app
      */
-    public function registerAnalytics()
+    protected function registerAnalytics(Application $app)
     {
-        $this->app->singleton('gamp', function ($app) {
+        $app->singleton('gamp', function ($app) {
             $config = $app['config'];
 
             $analytics = new Analytics($config->get('gamp.is_ssl', false));
@@ -84,6 +94,8 @@ class LaravelGAMPServiceProvider extends ServiceProvider
 
             return $analytics;
         });
+
+        $app->alias('gamp', Analytics::class);
     }
 
     /**

@@ -13,7 +13,7 @@
  *
  * @author        Lukonet
  * @license       MIT
- * @copyright (c) 2015 Lukonet Pvt. Ltd.
+ * @copyright (c) 2015-16 Lukonet Technologies Pvt. Ltd.
  *
  * @link          https://lukonet.com
  */
