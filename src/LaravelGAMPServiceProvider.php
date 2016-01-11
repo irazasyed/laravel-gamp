@@ -66,7 +66,7 @@ class LaravelGAMPServiceProvider extends ServiceProvider
      */
     public function registerAnalytics()
     {
-        $this->app->singleton('gamp', function ($app) {
+        $this->app->singleton('TheIconic\Tracking\GoogleAnalytics\Analytics', function ($app) {
             $config = $app['config'];
 
             $analytics = new Analytics($config->get('gamp.is_ssl', false));
@@ -93,6 +93,6 @@ class LaravelGAMPServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['gamp'];
+        return ['TheIconic\Tracking\GoogleAnalytics\Analytics'];
     }
 }
