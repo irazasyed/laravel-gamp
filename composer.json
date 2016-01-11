@@ -27,6 +27,11 @@
             "Irazasyed\\LaravelGAMP\\": "src/"
         }
     },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
     "suggest": {
         "irazasyed/larasupport": "Adds Package Support in Lumen, Lets you install any Laravel Package."
     }
