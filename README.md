@@ -14,9 +14,9 @@ Laravel-GAMP Package
 
 ## Quick start
 
-> If you're on Laravel `4.2` or on `5.0` with PHP `5.4` & above, Please use `0.5` branch. Otherwise, Just follow the below instructions.
+> If you're using Laravel `4.2.*` or `5.0.*` on PHP `5.4` & above, Please use `0.5` branch. Otherwise, Just follow the below instructions.
 >
-> Supported Laravel/Lumen Versions: `5.1` & `5.2`
+> **Note:** `0.5` branch is outdated and no longer supported. Consider upgrading if you're one of those users.
 
 ### Installation
 
