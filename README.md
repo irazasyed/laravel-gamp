@@ -1,12 +1,15 @@
 Laravel-GAMP Package
-=========================
+=====================
+
+[![Join the PHP Chat community][ico-phpchat]][link-phpchat]
 [![Laravel & Lumen Package][ico-package]][link-repo]
 [![Latest Version on Packagist][ico-version]][link-packagist]
-[![Software License][ico-license]](LICENSE)
+[![Software License][ico-license]][link-license]
 [![SensioLabsInsight][ico-sensiolabs]][link-sensiolabs]
 [![Total Downloads][ico-downloads]][link-downloads]
 
 > Laravel GAMP: Google Analytics Measurement Protocol Package for Laravel 5 & Lumen 5.
+>
 > Send data to Google Analytics from Laravel/Lumen. Supports all GA Measurement Protocol API methods.
 
 [![Laravel GAMP][cover-img]][link-author]
@@ -18,7 +21,7 @@ Laravel-GAMP Package
 >
 > **Note:** `0.5` branch is outdated and no longer supported. Consider upgrading if you're one of those users.
 
-### Installation
+### Install
 
 #### Step 1: Install Through Composer
 
@@ -164,19 +167,22 @@ Any issues, please [report here][link-issues]
 
 ## License
 
-[MIT](LICENSE) © [Syed Irfaq R.][link-author]
+The MIT License (MIT). Please see [License File][link-license] for more information.
 
 [cover-img]: https://cloud.githubusercontent.com/assets/1915268/8476296/b49f74ac-20dd-11e5-8698-aa23b2f7e6fd.png
+[ico-phpchat]: https://img.shields.io/badge/Join-PHP%20Chat-blue.svg?style=flat-square
 [ico-version]: https://img.shields.io/packagist/v/irazasyed/laravel-gamp.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/irazasyed/laravel-gamp.svg?style=flat-square
 [ico-sensiolabs]: https://insight.sensiolabs.com/projects/880d79a9-7bab-4872-ab98-76b2e53429e9/mini.png
 [ico-package]: https://img.shields.io/badge/Laravel%20%26%20Lumen-5-blue.svg?style=flat-square
 
+[link-phpchat]: https://phpchat.co/?ref=laravel-gamp
 [link-author]: https://github.com/irazasyed
 [link-repo]: https://github.com/irazasyed/laravel-gamp
-[link-issues]: https://github.com/irazasyed/laravel-gamp/issues
-[link-contributors]: https://github.com/irazasyed/laravel-gamp/contributors
+[link-license]: LICENSE.md
+[link-issues]: ../../issues
+[link-contributors]: ../../contributors
 [link-lib]: https://github.com/theiconic/php-ga-measurement-protocol
 [link-docs]: https://github.com/theiconic/php-ga-measurement-protocol#usage
 [link-packagist]: https://packagist.org/packages/irazasyed/laravel-gamp
