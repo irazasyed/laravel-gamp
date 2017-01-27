@@ -159,7 +159,7 @@ The MIT License (MIT). Please see [License File][link-license] for more informat
 [ico-sensiolabs]: https://insight.sensiolabs.com/projects/880d79a9-7bab-4872-ab98-76b2e53429e9/mini.png
 [ico-package]: https://img.shields.io/badge/Package%20for%20Laravel-4/5-blue.svg?style=flat-square
 
-[link-phpchat]: https://phpchat.co/?ref=gsuite-checker
+[link-phpchat]: https://phpchat.co/?ref=laravel-gamp
 [link-author]: https://github.com/irazasyed
 [link-repo]: https://github.com/irazasyed/laravel-gamp
 [link-license]: LICENSE.md
