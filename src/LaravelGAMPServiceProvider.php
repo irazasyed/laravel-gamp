@@ -16,7 +16,7 @@ namespace Irazasyed\LaravelGAMP;
  * @package       LaravelGAMP
  * @author        Lukonet
  * @license       MIT
- * @copyright (c) 2015-16 Lukonet Technologies Pvt. Ltd.
+ * @copyright (c) 2015-17 Lukonet Technologies Pvt. Ltd.
  * @link          https://lukonet.com
  */
 
@@ -79,7 +79,7 @@ class LaravelGAMPServiceProvider extends ServiceProvider
         $app->singleton('gamp', function ($app) {
             $config = $app['config'];
 
-            $analytics = new Analytics($config->get('gamp.is_ssl', false));
+            $analytics = new Analytics($config->get('gamp.is_ssl', false), $config->get('gamp.is_disabled', false));
 
             $analytics->setProtocolVersion($config->get('gamp.protocol_version', 1))
                 ->setTrackingId($config->get('gamp.tracking_id'));
