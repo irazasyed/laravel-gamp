@@ -1,23 +1,5 @@
 <?php
 
-/**
- * Laravel GAMP: Google Analytics - Measurement Protocol.
- *
- * NOTICE OF LICENSE
- *
- * Licensed under the MIT License.
- *
- * This source file is subject to the MIT  License that is
- * bundled with this package in the LICENSE file.  It is also available at
- * the following URL: http://opensource.org/licenses/MIT
- *
- * @author        Lukonet
- * @license       MIT
- * @copyright (c) 2015-17 Lukonet Technologies Pvt. Ltd.
- *
- * @link          https://lukonet.com
- */
-
 return [
     /*
     |--------------------------------------------------------------------------
@@ -65,14 +47,14 @@ return [
     |
     */
     'is_ssl' => false,
-    
+
     /*
     |--------------------------------------------------------------------------
     | Disable Hits [Optional]
     |--------------------------------------------------------------------------
     |
-    | This option controls enabling or disabling the library. 
-    | Useful in Staging/Dev environments when you don't want to actually send hits to GA. 
+    | This option controls enabling or disabling the library.
+    | Useful in Staging/Dev environments when you don't want to actually send hits to GA.
     | When disabled, it returns a AnalyticsResponseInterface object that returns empty values.
     |
     | To disable library hits, set true.
