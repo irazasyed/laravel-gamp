@@ -13,7 +13,7 @@
  *
  * @author        Lukonet
  * @license       MIT
- * @copyright (c) 2015-16 Lukonet Technologies Pvt. Ltd.
+ * @copyright (c) 2015-17 Lukonet Technologies Pvt. Ltd.
  *
  * @link          https://lukonet.com
  */
@@ -65,6 +65,23 @@ return [
     |
     */
     'is_ssl' => false,
+    
+    /*
+    |--------------------------------------------------------------------------
+    | Disable Hits [Optional]
+    |--------------------------------------------------------------------------
+    |
+    | This option controls enabling or disabling the library. 
+    | Useful in Staging/Dev environments when you don't want to actually send hits to GA. 
+    | When disabled, it returns a AnalyticsResponseInterface object that returns empty values.
+    |
+    | To disable library hits, set true.
+    |
+    | Default: false
+    | Valid Values: (Boolean) "true" OR "false"
+    |
+    */
+    'is_disabled' => false,
 
     /*
     |--------------------------------------------------------------------------
