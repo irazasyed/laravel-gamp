@@ -137,6 +137,12 @@ To send data over SSL, set `is_ssl` to true.
 'is_ssl' => true,
 ```
 
+To disable library in Staging/Dev env (Prevents the library from sending any hits to GA), set `is_disabled` to true.
+
+``` php
+'is_disabled' => true,
+```
+
 To Anonymize IP, set `anonymize_ip` to true.
 
 ``` php
