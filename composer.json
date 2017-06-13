@@ -31,6 +31,14 @@
     "extra": {
         "branch-alias": {
             "dev-master": "1.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Irazasyed\\LaravelGAMP\\LaravelGAMPServiceProvider"
+            ],
+            "aliases": {
+                "GAMP": "Irazasyed\\LaravelGAMP\\Facades\\GAMP"
+            }
         }
     },
     "suggest": {
