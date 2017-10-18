@@ -87,6 +87,6 @@ class LaravelGAMPServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['gamp'];
+        return ['gamp', Analytics::class];
     }
 }
