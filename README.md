@@ -7,6 +7,7 @@ Laravel-GAMP Package
 [![Software License][ico-license]][link-license]
 [![SensioLabsInsight][ico-sensiolabs]][link-sensiolabs]
 [![Total Downloads][ico-downloads]][link-downloads]
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Firazasyed%2Flaravel-gamp.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Firazasyed%2Flaravel-gamp?ref=badge_shield)
 
 > Laravel GAMP: Google Analytics Measurement Protocol Package for Laravel 5 & Lumen 5.
 >
@@ -195,3 +196,6 @@ The MIT License (MIT). Please see [License File][link-license] for more informat
 [link-downloads]: https://packagist.org/packages/irazasyed/laravel-gamp/stats
 [link-sensiolabs]: https://insight.sensiolabs.com/projects/880d79a9-7bab-4872-ab98-76b2e53429e9
 
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Firazasyed%2Flaravel-gamp.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Firazasyed%2Flaravel-gamp?ref=badge_large)
