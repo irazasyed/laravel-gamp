@@ -9,7 +9,7 @@ Laravel-GAMP Package
 [![Total Downloads][ico-downloads]][link-downloads]
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Firazasyed%2Flaravel-gamp.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Firazasyed%2Flaravel-gamp?ref=badge_shield)
 
-> Laravel GAMP: Google Analytics Measurement Protocol Package for Laravel 5 & Lumen 5.
+> Laravel GAMP: Google Analytics Measurement Protocol Package for Laravel & Lumen 5|6.
 >
 > Send data to Google Analytics from Laravel/Lumen. Supports all GA Measurement Protocol API methods.
 
@@ -18,74 +18,29 @@ Laravel-GAMP Package
 
 ## Quick start
 
-> If you're using Laravel `4.2.*` or `5.0.*` on PHP `5.4` & above, Please use `0.5` branch. Otherwise, Just follow the below instructions.
->
-> **Note:** `0.5` branch is outdated and no longer supported. Consider upgrading if you're one of those users.
-
 ### Install
 
 #### Step 1: Install Through Composer
 
-You can either add the package directly by firing this command
-
-``` bash
+```bash
 $ composer require irazasyed/laravel-gamp
 ```
 
-Or add in the `require` key of `composer.json` file manually
+#### (Lumen) Add the Service Provider
 
-```json
-"irazasyed/laravel-gamp": "^1.0"
-```
+Open `bootstrap/app.php` and register the service provider by adding:
 
-And Run the Composer update command
-
-``` bash
-$ composer update
-```
-
-#### Step 2: Add the Service Provider
-
-##### Laravel
-
-Open `config/app.php` and, to your "providers" array at the bottom, add:
-
-``` php
-Irazasyed\LaravelGAMP\LaravelGAMPServiceProvider::class
-```
-
-##### Lumen
-
-Open `bootstrap/app.php` and add register the service provider by adding:
-
-``` php
+```php
 $app->register(Irazasyed\LaravelGAMP\LaravelGAMPServiceProvider::class);
 ```
 
-#### Step 3: Add Facade (Optional) (Laravel Only)
-
-Optionally add an alias to make it easier to use the library. Open `config/app.php` and, to your "aliases" array at the bottom, add:
-
-``` php
-'GAMP'  => Irazasyed\LaravelGAMP\Facades\GAMP::class
-```
-
-#### Step 4: Publish Config (Laravel Only)
+#### Step 2: Publish Config
 
 Open your terminal window and fire the following command to publish config file to your config directory:
 
 ``` bash
 $ php artisan vendor:publish --provider="Irazasyed\LaravelGAMP\LaravelGAMPServiceProvider"
 ```
-
-OR
-
-``` bash
-$ php artisan vendor:publish
-```
-
-The former command publishes config file for just this package and the latter publishes vendor files for other packages too. Depending on what you want to do, you can use any (Doesn't really matter).
-
 
 ## Usage
 
@@ -182,7 +137,7 @@ The MIT License (MIT). Please see [License File][link-license] for more informat
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/irazasyed/laravel-gamp.svg?style=flat-square
 [ico-sensiolabs]: https://insight.sensiolabs.com/projects/880d79a9-7bab-4872-ab98-76b2e53429e9/mini.png
-[ico-package]: https://img.shields.io/badge/Laravel%20%26%20Lumen-5-blue.svg?style=flat-square
+[ico-package]: https://img.shields.io/badge/Laravel%20%26%20Lumen-5|6-blue.svg?style=flat-square
 
 [link-phpchat]: https://phpchat.co/?ref=laravel-gamp
 [link-author]: https://github.com/irazasyed
