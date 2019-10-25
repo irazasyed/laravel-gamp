@@ -1,13 +1,12 @@
 Laravel-GAMP Package
 =====================
-
-[![Join the PHP Chat community][ico-phpchat]][link-phpchat]
+[![Join PHP Chat][ico-phpchat]][link-phpchat]
+[![Chat on Telegram][ico-telegram]][link-telegram]
 [![Laravel & Lumen Package][ico-package]][link-repo]
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]][link-license]
 [![SensioLabsInsight][ico-sensiolabs]][link-sensiolabs]
 [![Total Downloads][ico-downloads]][link-downloads]
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Firazasyed%2Flaravel-gamp.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Firazasyed%2Flaravel-gamp?ref=badge_shield)
 
 > Laravel GAMP: Google Analytics Measurement Protocol Package for Laravel & Lumen 5|6.
 >
@@ -132,14 +131,16 @@ Any issues, please [report here][link-issues]
 The MIT License (MIT). Please see [License File][link-license] for more information.
 
 [cover-img]: https://cloud.githubusercontent.com/assets/1915268/8476296/b49f74ac-20dd-11e5-8698-aa23b2f7e6fd.png
-[ico-phpchat]: https://img.shields.io/badge/Join-PHP%20Chat-blue.svg?style=flat-square
+[ico-phpchat]: https://img.shields.io/badge/Slack-PHP%20Chat-5c6aaa.svg?style=flat-square&logo=slack&labelColor=4A154B
+[ico-telegram]: https://img.shields.io/badge/@PHPChatCo-2CA5E0.svg?style=flat-square&logo=telegram&label=Telegram
 [ico-version]: https://img.shields.io/packagist/v/irazasyed/laravel-gamp.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/irazasyed/laravel-gamp.svg?style=flat-square
 [ico-sensiolabs]: https://insight.sensiolabs.com/projects/880d79a9-7bab-4872-ab98-76b2e53429e9/mini.png
-[ico-package]: https://img.shields.io/badge/Laravel%20%26%20Lumen-5|6-blue.svg?style=flat-square
+[ico-package]: https://img.shields.io/badge/Laravel-5|6-FF2D20.svg?style=flat-square&logo=laravel&labelColor=black&logoColor=white
 
 [link-phpchat]: https://phpchat.co/?ref=laravel-gamp
+[link-telegram]: https://t.me/PHPChatCo
 [link-author]: https://github.com/irazasyed
 [link-repo]: https://github.com/irazasyed/laravel-gamp
 [link-license]: LICENSE.md
@@ -150,7 +151,6 @@ The MIT License (MIT). Please see [License File][link-license] for more informat
 [link-packagist]: https://packagist.org/packages/irazasyed/laravel-gamp
 [link-downloads]: https://packagist.org/packages/irazasyed/laravel-gamp/stats
 [link-sensiolabs]: https://insight.sensiolabs.com/projects/880d79a9-7bab-4872-ab98-76b2e53429e9
-
 
 
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Firazasyed%2Flaravel-gamp.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Firazasyed%2Flaravel-gamp?ref=badge_large)
