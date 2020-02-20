@@ -2,11 +2,11 @@
 
 namespace Irazasyed\LaravelGAMP;
 
-use Illuminate\Support\ServiceProvider;
-use TheIconic\Tracking\GoogleAnalytics\Analytics;
-use Laravel\Lumen\Application as LumenApplication;
 use Illuminate\Contracts\Container\Container as Application;
 use Illuminate\Foundation\Application as LaravelApplication;
+use Illuminate\Support\ServiceProvider;
+use Laravel\Lumen\Application as LumenApplication;
+use TheIconic\Tracking\GoogleAnalytics\Analytics;
 
 class LaravelGAMPServiceProvider extends ServiceProvider
 {
