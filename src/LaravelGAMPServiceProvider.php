@@ -14,7 +14,7 @@ class LaravelGAMPServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $source = __DIR__ . '/config/gamp.php';
+        $source = __DIR__.'/config/gamp.php';
 
         if ($this->app instanceof LaravelApplication && $this->app->runningInConsole()) {
             $this->publishes([$source => config_path('gamp.php')]);
