@@ -137,7 +137,7 @@ The MIT License (MIT). Please see [License File][link-license] for more informat
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/irazasyed/laravel-gamp.svg?style=flat-square
 [ico-sensiolabs]: https://insight.sensiolabs.com/projects/880d79a9-7bab-4872-ab98-76b2e53429e9/mini.png
-[ico-package]: https://img.shields.io/badge/Laravel-5|6|7-FF2D20.svg?style=flat-square&logo=laravel&labelColor=black&logoColor=white
+[ico-package]: https://img.shields.io/badge/Laravel-5~8-FF2D20.svg?style=flat-square&logo=laravel&labelColor=black&logoColor=white
 
 [link-phpchat]: https://phpchat.co/?ref=laravel-gamp
 [link-telegram]: https://t.me/PHPChatCo
