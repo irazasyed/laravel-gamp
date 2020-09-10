@@ -20,7 +20,7 @@
     ],
     "require": {
         "php": "^7.2",
-        "illuminate/support": "^5.0 || ^6.0 || ^7.0",
+        "illuminate/support": "^5.0 || ^6.0 || ^7.0 || ^8.0",
         "theiconic/php-ga-measurement-protocol": "^2.0"
     },
     "autoload": {
