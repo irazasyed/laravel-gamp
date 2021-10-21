@@ -13,7 +13,7 @@ return [
     | https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#tid
     |
     */
-    'tracking_id' => 'UA-XXXX-Y',
+    'tracking_id' => env('GA_ID'),
 
     /*
     |--------------------------------------------------------------------------
