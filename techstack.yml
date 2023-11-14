@@ -1,0 +1,28 @@
+repo_name: irazasyed/laravel-gamp
+report_id: 13de928fd09cba732486391072e0c223
+repo_type: Public
+timestamp: '2023-11-14T06:25:26+00:00'
+requested_by: irazasyed
+provider: github
+branch: master
+detected_tools_count: 2
+tools:
+- name: PHP
+  description: A popular general-purpose scripting language that is especially suited
+    to web development
+  website_url: http://www.php.net/
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/991/hwUcGZ41_400x400.jpg
+  detection_source: Repo Metadata
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source: Repo Metadata
